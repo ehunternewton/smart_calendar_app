@@ -5,7 +5,7 @@
     <h2 class="text-center">June 2019</h2>
 <table border="1" style="width:100%" class="table table-striped">
 
-  <tr>
+  <thead class="thead-light">
     <th>Sun</th>
     <th>Mon</th>
     <th>Tue</th>
@@ -13,7 +13,7 @@
     <th>Thu</th>
     <th>Fri</th>
     <th>Sat</th>
-  </tr>
+  </thead>
 
 {% for week in month %}
     <tr>
@@ -24,6 +24,7 @@
                 <td>
             {% endif %}
                     {{ day.day }}
+                    <br>
                 </td>
         {% endfor %}
     </tr>
