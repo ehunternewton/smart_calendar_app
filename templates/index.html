@@ -3,7 +3,7 @@
 
     <h1 class="text-center">Smart Calendar</h1>
     <h2 class="text-center">June 2019</h2>
-<table border="1" style="width:100%">
+<table border="1" style="width:100%" class="table table-striped">
 
   <tr>
     <th>Sun</th>
@@ -17,8 +17,14 @@
 
 {% for week in month %}
     <tr>
-        {% for day in week %}
-        <td>{{ day }} </td>
+    {% for day in week %}
+            {% if day == today %}
+                <td style="background-color: lightblue">
+            {% else %}
+                <td>
+            {% endif %}
+                    {{ day.day }}
+                </td>
         {% endfor %}
     </tr>
 {% endfor %}
