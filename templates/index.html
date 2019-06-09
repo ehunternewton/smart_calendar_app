@@ -1,4 +1,27 @@
 {% extends 'layout.html' %}
 {% block body %}
-Ello govn'a
+
+    <h1 class="text-center">Smart Calendar</h1>
+    <h2 class="text-center">June 2019</h2>
+<table border="1" style="width:100%">
+
+  <tr>
+    <th>Sun</th>
+    <th>Mon</th>
+    <th>Tue</th>
+    <th>Wed</th>
+    <th>Thu</th>
+    <th>Fri</th>
+    <th>Sat</th>
+  </tr>
+
+{% for week in month %}
+    <tr>
+        {% for day in week %}
+        <td>{{ day }} </td>
+        {% endfor %}
+    </tr>
+{% endfor %}
+
+</table>
 {% endblock %}
