@@ -1,24 +1,36 @@
 {% extends 'layout.html' %}
 
 {% block body %}
+
+<style>
+
+
+</style>
+
     <h3 class="text-center">{{ today.month }}/{{ today.year }}</h3>
 <div class="container-fluid">
   <div class="row seven-cols">
-    <div class="col-sm-1">Sun</div>
-    <div class="col-sm-1">Mon</div>
-    <div class="col-sm-1">Tue</div>
-    <div class="col-sm-1">Wed</div>
-    <div class="col-sm-1">Thu</div>
-    <div class="col-sm-1">Fri</div>
-    <div class="col-sm-1">Sat</div>
+    <div class="col">Sun</div>
+    <div class="col">Mon</div>
+    <div class="col">Tue</div>
+    <div class="col">Wed</div>
+    <div class="col">Thu</div>
+    <div class="col">Fri</div>
+    <div class="col">Sat</div>
   </div>
 {% for week in month %}
     <div class="row seven-cols">
         {% for day in week %}
-            <div class="col-sm-1">{{ day.day }}</div>
+            <div class="card col">
+            <div class="card-body m-0 p-0">
+            <h5 class="card-title text-justify">{{ day.day }}</h5>
+            <p class="card-text m-0 p-0">Lorem ipsum</p>
+            </div>
+            </div>
         {% endfor %}
     </div>
 {% endfor %}
 </div>
 
 {% endblock %}
+<div class="card">{{ day.day }}</div>
