@@ -11,7 +11,8 @@ def index():
     today = datetime.date.today()
     c = calendar.TextCalendar(calendar.SUNDAY)
     month = c.monthdatescalendar(today.year, today.month)
-    return render_template('test2.html', month=month, today=today)
+    monthTitle = today.strftime("%B %Y")
+    return render_template('test2.html', month=month, today=today, monthTitle=monthTitle)
 
 
 if __name__ == '__main__':

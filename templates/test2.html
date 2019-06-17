@@ -15,8 +15,10 @@
 
 
 </style>
-
-    <h3 class="text-center">{{ today.month }}/{{ today.year }}</h3>
+    <h1 class="text-center">Schedule a Class!</h1>
+    <br>
+    <h3 class="text-center"><button class="btn btn-primary float-left"> << </button> {{ monthTitle }} <button class="btn btn-primary float-right"> >> </button></h3>
+    <br>
 <div class="container-fluid">
   <div class="row seven-cols text-center">
     <div class="col">Sun</div>
@@ -31,9 +33,11 @@
     <div class="row seven-cols">
         {% for day in week %}
             <div class="card col m-0 p-0">
-            <div class="card-body m-0 p-0">
+            <div class="card-body m-0 p-0 {% if day < today %} bg-secondary text-white {% endif %} {% if day == today %} bg-primary text-white {% endif %}">
             <h5 class="card-title text-center m-0 p-0">{{ day.day }}</h5>
-            <p class="card-text m-0 p-0">Lorem ipsum</p>
+            {% if day.weekday() == 0 or  day.weekday() == 2 or day.weekday() == 4 %}
+                <a href="#" class="card-link card-text m-0 p-0">Lorem ipsum</a>
+            {% endif %}
             </div>
             </div>
         {% endfor %}
