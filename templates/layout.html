@@ -1,3 +1,11 @@
+<style>
+  .exampleText{
+  color: grey;
+  }
+</style>
+
+
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -7,33 +15,36 @@
   </head>
   <body class="container-fluid">
 
-  <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-  Launch demo modal
-</button>
 
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<!-- Modal to Register a member-->
+<div class="modal fade" id="registerModal" tabindex="-1" role="dialog" aria-labelledby="registerModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <h5 class="modal-title" id="registerModalLabel">Register as a new Member</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
       <div class="modal-body">
-        ...
+        Please enter your first name: <input class="exampleText" type="input" id="fName" value="Christine"><br/>
+        Please enter your last name: <input class="exampleText" type="input" id="lName" value="Balbin"><br/>
+        Please enter your email: <input class="exampleText" type="input" id="userEmail" value="example@gmail.com"><br/>
+        Please enter your password: <input class="exampleText" type="input" id="pass" value="something secret"><br/>
+
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary">Register</button>
       </div>
     </div>
   </div>
 </div>
+<!--end modal to register a member-->
+
 
 {#    {% include 'includes/_navbar.html' %}#}
+<script   src="https://code.jquery.com/jquery-3.4.1.min.js"   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="   crossorigin="anonymous"></script>
     <script src="http://yui.yahooapis.com/3.18.1/build/yui/yui-min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
     <div class="container pt-3">
@@ -47,6 +58,5 @@
 {#        CKEDITOR.replace('editor')#}
 {#    </script>#}
   </body>
-
 
 </html>
